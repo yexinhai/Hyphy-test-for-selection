@@ -1,4 +1,7 @@
 #!/bin/bash
+# Xinhai Ye, yexinhai@zju.edu.cn
+
+
 #BSUB -J hyphy
 #BSUB -n 1
 #BSUB -R "span[hosts=1]"
