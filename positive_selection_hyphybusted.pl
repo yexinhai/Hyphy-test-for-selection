@@ -66,7 +66,7 @@ while (<$Group>) {
 	`mv $group\.cds.fasta $group`;
 	`mafft --auto $group/$group\.pep.fasta >$group\/$group\.pep.mafft.fasta`;
 	`mkdir $group\/for_hyphy`;
-	`perl ../pal2nal.pl $group\/$group\.pep.mafft.fasta $group\/$group\.cds.fasta -output fasta -nogap >$group\/for_paml/test.codon.fasta`;
+	`perl ../pal2nal.pl $group\/$group\.pep.mafft.fasta $group\/$group\.cds.fasta -output fasta -nogap >$group\/for_hyphy/test.codon.fasta`;
 	open my $codon_ala, "<", "$group\/for_hyphy/test.codon.fasta" or die "can't open test.codon.fasta in $group !\n";
 	open OUT3, ">", "$group\/for_hyphy/test.codon.changename.fasta";
 	while (<$codon_ala>) {
